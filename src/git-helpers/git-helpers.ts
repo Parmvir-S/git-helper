@@ -17,17 +17,14 @@ export async function setupRepository() {
         const { stdout, stderr } = await exec('git init');
         console.log(stdout);
         if (!remoteOriginSet) {
-            const { stdout: remoteStdout, stderr: remoteStderr } = await exec(`git remote add origin ${process.env.GIT_REPO}`);
-            console.log(remoteStdout);
-            console.log(process.env.GIT_REPO)
+            await exec(`git remote add origin ${process.env.GIT_REPO}`);
             await exec('git branch -M main');
             await exec('git add .');
             await exec('git commit -m "Initial Commit"');
-            await exec('git push -u origin main');
             remoteOriginSet = true;
         }
     } catch(error) {
-        console.error("Failied Git Initalization: ", error)
+        console.error("Failied Git Initalization: ", error);
     }   
 }
 
