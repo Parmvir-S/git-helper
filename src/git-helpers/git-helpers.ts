@@ -25,7 +25,7 @@ export async function setupRepository() {
             remoteOriginSet = true;
         }
     } catch(error) {
-        console.error("Failied Git Initalization: ", error);
+        console.error("Failied Git Initalization: ", error)
     }   
 }
 
