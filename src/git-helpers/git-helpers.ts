@@ -21,6 +21,7 @@ export async function setupRepository() {
             await exec('git branch -M main');
             await exec('git add .');
             await exec('git commit -m "Initial Commit"');
+            await exec('git push -u origin main');
             remoteOriginSet = true;
         }
     } catch(error) {
