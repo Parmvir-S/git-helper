@@ -30,7 +30,7 @@ export async function setupRepository() {
 }
 
 function createGitignoreFile() {
-    
+
 }
 
 // Git Status -> Get Added/Modified/Deleted Files
