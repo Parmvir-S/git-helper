@@ -1,0 +1,20 @@
+{
+  "name": "git-helper",
+  "version": "1.0.0",
+  "description": "GIT Helper Utility",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && nodemon dist/index.js"
+  },
+  "author": "Parm",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.11",
+    "nodemon": "^3.1.4",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
