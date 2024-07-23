@@ -1,3 +1,4 @@
-import { setupRepository } from "./git-helpers/git-helpers";
+import { setupRepository, createGitignoreFile } from "./git-helpers/git-helpers";
 
-setupRepository();
+createGitignoreFile()
+// setupRepository();

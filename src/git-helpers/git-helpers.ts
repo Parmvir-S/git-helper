@@ -1,12 +1,13 @@
+import path from 'path';
 require('dotenv').config();
-
+const fs = require('node:fs/promises');
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 
 let remoteOriginSet = false;
 
 // Setup Local/Remote Repo
-export async function setupRepository() {
+export async function setupRepository(): Promise<void> {
     // const datePattern = /\b\d{2}\/\d{2}\/\d{4}\b/;
     // exec('dir', (error, stdout, stderr) => {
     //     const fileLines = stdout.split("\n").filter(line => datePattern.test(line));
@@ -25,12 +26,19 @@ export async function setupRepository() {
             remoteOriginSet = true;
         }
     } catch(error) {
-        console.error("Failied Git Initalization: ", error);
+        console.error('Failied Git Initalization Process Or Already Initialized');
     }   
 }
 
-function createGitignoreFile() {
+export async function createGitignoreFile(): Promise<void> {
+    const content: string = '.env\n/node_modules\n/dist\n';
+    const filePath = path.resolve(__dirname, '../../.gitignore2');
+    try {
+        await fs.writeFile(filePath, content, { encoding: 'utf8' });
 
+    } catch(error) {
+        console.log('Error Creating .gitignore File: ', error);
+    } 
 }
 
 // Git Status -> Get Added/Modified/Deleted Files
