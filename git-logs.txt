@@ -1,0 +1,34 @@
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   src/git-helpers/git-helpers.ts
+        modified:   src/index.ts
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore2
+        src/testAdd.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+TOP HAS ADDITION -> src/testAdd.txt shows up in the untracked files section
+BOTTOM HAS FILE DELETION -> testAdd.txt shows up in the "deleted" section
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   git-helpers/git-helpers.ts
+        modified:   index.ts
+        deleted:    testAdd.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../.gitignore2
+
+no changes added to commit (use "git add" and/or "git commit -a")
